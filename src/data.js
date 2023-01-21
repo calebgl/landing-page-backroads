@@ -6,8 +6,8 @@ export const pageLinks = [
 ];
 
 export const socialLinks = [
-  { href: "https://www.twitter.com", icon: "mdi:github" },
-  { href: "https://www.twitter.com", icon: "mdi:linkedin" },
+  { href: "https://github.com/calebgl/landing-page-backroads", icon: "mdi:github" },
+  { href: "https://www.linkedin.com/in/angel-caleb-guerrero-luna", icon: "mdi:linkedin" },
 ];
 
 export const services = [
