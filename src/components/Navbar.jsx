@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import { pageLinks, socialLinks } from "../data";
 
 function Navbar() {
   return (
@@ -13,60 +14,29 @@ function Navbar() {
               <Icon icon="mdi:dots-vertical" />
             </button>
           </div>
-          <ul className="nav-links" id="nav-links">
-            <li>
-              <a href="#home" className="nav-link">
-                home
-              </a>
-            </li>
-
-            <li>
-              <a href="#about" className="nav-link">
-                about
-              </a>
-            </li>
-
-            <li>
-              <a href="#services" className="nav-link">
-                services
-              </a>
-            </li>
-
-            <li>
-              <a href="#tours" className="nav-link">
-                tours
-              </a>
-            </li>
+          <ul id="nav-links" className="nav-links">
+            {pageLinks.map((pageLink) => (
+              <li key={pageLink.href}>
+                <a href={pageLink.href} className="nav-link">
+                  {pageLink.text}
+                </a>
+              </li>
+            ))}
           </ul>
 
           <ul className="nav-icons">
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-facebook"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-twitter"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://www.twitter.com"
-                target="_blank"
-                className="nav-icon"
-              >
-                <i className="fab fa-squarespace"></i>
-              </a>
-            </li>
+            {socialLinks.map((socialLink) => (
+              <li key={socialLink.icon}>
+                <a
+                  href={socialLink.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="nav-icon"
+                >
+                  <Icon icon={socialLink.icon} />
+                </a>
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
