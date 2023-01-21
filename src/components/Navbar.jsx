@@ -1,4 +1,6 @@
 import { Icon } from "@iconify/react";
+import PageLink from "./PageLink";
+import SocialLink from "./SocialLink";
 import { pageLinks, socialLinks } from "../data";
 
 function Navbar() {
@@ -14,28 +16,24 @@ function Navbar() {
               <Icon icon="mdi:dots-vertical" />
             </button>
           </div>
+
           <ul id="nav-links" className="nav-links">
             {pageLinks.map((pageLink) => (
-              <li key={pageLink.href}>
-                <a href={pageLink.href} className="nav-link">
-                  {pageLink.text}
-                </a>
-              </li>
+              <PageLink
+                key={pageLink.href}
+                pageLink={pageLink}
+                className="nav-link"
+              />
             ))}
           </ul>
 
           <ul className="nav-icons">
             {socialLinks.map((socialLink) => (
-              <li key={socialLink.icon}>
-                <a
-                  href={socialLink.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="nav-icon"
-                >
-                  <Icon icon={socialLink.icon} />
-                </a>
-              </li>
+              <SocialLink
+                key={socialLink.href}
+                socialLink={socialLink}
+                className="nav-icon"
+              />
             ))}
           </ul>
         </div>

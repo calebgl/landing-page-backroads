@@ -1,3 +1,4 @@
+import PageLink from "./PageLink";
 import { pageLinks } from "../data";
 
 const year = new Date().getFullYear();
@@ -7,11 +8,11 @@ function Footer() {
     <footer className="section footer">
       <ul className="footer-links">
         {pageLinks.map((pageLink) => (
-          <li key={pageLink.href}>
-            <a href={pageLink.href} className="footer-link">
-              {pageLink.text}
-            </a>
-          </li>
+          <PageLink
+            key={pageLink.href}
+            pageLink={pageLink}
+            className="footer-link"
+          />
         ))}
       </ul>
       <p className="copyright">
