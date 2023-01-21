@@ -1,7 +1,7 @@
-import tour1 from "../public/images/tour-1.jpg";
-import tour2 from "../public/images/tour-2.jpg";
-import tour3 from "../public/images/tour-3.jpg";
-import tour4 from "../public/images/tour-4.jpg";
+import tour1 from "./images/tour-1.jpg";
+import tour2 from "./images/tour-2.jpg";
+import tour3 from "./images/tour-3.jpg";
+import tour4 from "./images/tour-4.jpg";
 
 export const pageLinks = [
   { href: "#home", text: "home" },

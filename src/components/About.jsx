@@ -1,4 +1,4 @@
-import img from "../../public/images/about.jpg"
+import img from "../images/about.jpg"
 import Title from "./Title";
 
 function About() {
