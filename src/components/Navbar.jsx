@@ -7,9 +7,9 @@ function Navbar() {
       <nav className="navbar">
         <div className="nav-wrapper">
           <div className="nav-header">
-            <div className="nav-logo" alt="alleyway">
-              <Icon icon="vscode-icons:file-type-reactjs" />
-            </div>
+            <a href="#home" className="nav-logo">
+              <Icon icon="carbon:logo-react" />
+            </a>
             <button type="button" className="nav-toggle" id="nav-toggle">
               <Icon icon="mdi:dots-vertical" />
             </button>
