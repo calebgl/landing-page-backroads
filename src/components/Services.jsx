@@ -1,6 +1,6 @@
-import { Icon } from "@iconify/react";
-import { services } from "../data";
+import Service from "./Service";
 import Title from "./Title";
+import { services } from "../data";
 
 function Services() {
   return (
@@ -9,15 +9,7 @@ function Services() {
 
       <div className="section-center services-center">
         {services.map((service) => (
-          <article key={service.icon} className="service">
-            <span className="service-icon">
-              <Icon icon={service.icon} />
-            </span>
-            <div className="service-info">
-              <h4 className="service-title">{service.title}</h4>
-              <p className="service-text">{service.text}</p>
-            </div>
-          </article>
+          <Service key={service.icon} service={service} />
         ))}
       </div>
     </section>
